@@ -10,8 +10,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/application-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/thread-state/pom.xml" />
-        <option value="$PROJECT_DIR$/thread-common/pom.xml" />
+        <option value="$PROJECT_DIR$/thread-creation/pom.xml" />
+        <option value="$PROJECT_DIR$/synchronized-demo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
