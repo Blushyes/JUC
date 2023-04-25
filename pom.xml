@@ -12,6 +12,7 @@
     <module>synchronized-demo</module>
     <module>protective-pause-pattern</module>
       <module>producer-consumer-pattern</module>
+      <module>atomic</module>
   </modules>
   <packaging>pom</packaging>
 
