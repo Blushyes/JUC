@@ -109,7 +109,7 @@ AtomicLongFieldUpdater
 
 - **只能配合volatile修饰的字段使用。**
 - **通过工厂方法创建对象。**
-- 只能保护非private字段
+- **只能保护非private字段**
 
 ## 原子累加器
 
