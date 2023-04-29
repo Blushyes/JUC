@@ -13,6 +13,7 @@
     <module>protective-pause-pattern</module>
       <module>producer-consumer-pattern</module>
       <module>atomic</module>
+      <module>thread-pool</module>
   </modules>
   <packaging>pom</packaging>
 

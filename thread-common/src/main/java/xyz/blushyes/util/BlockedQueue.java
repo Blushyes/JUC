@@ -46,6 +46,31 @@ public class BlockedQueue<T> {
         lock.unlock();
     }
 
+    // 带超时存入
+    public void offer(T e, long timeout, TimeUnit timeUnit){
+        lock.lock();
+
+        long nanos = timeUnit.toNanos(timeout);
+
+        while (storage.size() == capacity) {   // 如果队列已满，那么进入阻塞
+            try {
+                log.debug("队列满了存不进，阻塞中......");
+                nanos = publisherBlocked.awaitNanos(nanos);
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+
+        storage.offer(e);
+        log.debug("存入：{}，队列：{}", e, storage);
+
+        // 通知消费者队列中有元素了，可以起来干活了
+        consumerBlocked.signal();
+
+        lock.unlock();
+    }
+
+
     // 取出
     public T poll(){
         lock.lock();

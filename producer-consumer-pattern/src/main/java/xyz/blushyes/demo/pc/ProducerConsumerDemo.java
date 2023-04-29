@@ -8,7 +8,7 @@ import xyz.blushyes.util.ThreadUtil;
 public class ProducerConsumerDemo {
     public static void main(String[] args) {
         BlockedQueue<Integer> blockedQueue = new BlockedQueue<>(5);
-
+        
         for (int i = 0; i < 2; ++i){
             new Thread(()->{
                 for (int j = 0; j < 100; ++j) {
